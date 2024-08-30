@@ -1,0 +1,55 @@
+.mainBox {
+    height: 696px;
+    background-image: url(..//..//../public/images/Picture.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding-left: 64px;
+    display: flex;
+    align-items: center;
+}
+
+.mainDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 571px;
+    height: 176px;
+}
+
+.mainTitle {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 0.67;
+    color: var(--inputs);
+    margin: 0 0 16px 0;
+}
+
+.mainDescr {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.33;
+    color: var(--inputs);
+    margin: 0;
+}
+
+.mainButton  {
+    border-radius: 200px;
+    width: 173px;
+    height: 56px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    color: var(--white);
+    background: var(--button);
+    border: none;
+    cursor: pointer;
+    transition: background 800ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.mainButton:hover {
+    background: var(--buttonhover);
+}

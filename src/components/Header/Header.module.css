@@ -1,0 +1,30 @@
+header {
+    background: var(--inputs);
+    border-bottom: 1px solid var(--badges);
+    padding: 24px 200px 24px 64px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+}
+
+.headerList {
+    display: flex;
+    gap: 32px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.headerItem {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--main);
+    cursor: pointer;
+    transition: color 800ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.headerItem:hover {
+    color: var(--buttonhover);
+}
