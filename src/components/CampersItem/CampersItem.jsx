@@ -1,11 +1,24 @@
 import { icons as sprite } from '../../assets/index.js';
-import css from "../CampersItem/CampersItem.module.css"
+import css from "../CampersItem/CampersItem.module.css";
 
-export default function CampersItem({data}) {
-    const image = data.gallery[0]
+export default function CampersItem({ data }) {
+    const image = data.gallery[0];
     const count = data.reviews.length;
 
-    const {AC, bathroom, kitchen, Tv, radio, refrigerator, microwave, gas, water} = data
+    const { AC, bathroom, kitchen, Tv, radio, refrigerator, microwave, gas, water } = data;
+
+    // Масив об'єктів, де кожен об'єкт містить назву властивості та її значення
+    const features = [
+        { name: "AC", value: AC },
+        { name: "Bathroom", value: bathroom },
+        { name: "Kitchen", value: kitchen },
+        { name: "TV", value: Tv },
+        { name: "Radio", value: radio },
+        { name: "Refrigerator", value: refrigerator },
+        { name: "Microwave", value: microwave },
+        { name: "Gas", value: gas },
+        { name: "Water", value: water }
+    ];
 
     return (
         <div className={css.itemBox}>
@@ -36,11 +49,19 @@ export default function CampersItem({data}) {
                     </span>
                 </div>
                 <p className={css.itemDescr}>{data.description}</p>
-                <ul>
-                    
+                
+                <ul className={css.itemList}>
+                    {features
+                        .filter(feature => feature.value) 
+                        .map((feature, index) => (       
+                            <li key={index} className={css.itemFeature}>
+                                <p className={css.itemP}>{feature.name}</p>
+                            </li>
+                    ))}
                 </ul>
+                
                 <button className={css.itemButton}>Show more</button>
             </div>
         </div>
-    )
+    );
 }

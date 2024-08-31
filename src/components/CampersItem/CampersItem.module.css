@@ -84,6 +84,9 @@
     line-height: 1.5;
     letter-spacing: -0.01em;
     color: var(--white);
+    align-self: flex-end;
+    position: absolute;
+    bottom: 0;
 
     border-radius: 200px;
     width: 166px;
@@ -121,4 +124,34 @@
 
 .itemBoxDiff {
     width: 100%;
+    position: relative;
+}
+
+.itemFeature {
+    border-radius: 100px;
+    width: max-content;
+    padding: 0 18px;
+    height: 48px;
+    background: var(--badges);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemList {
+    margin: 0 0 24px 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.itemP {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--main);
+    margin: 0;
 }
