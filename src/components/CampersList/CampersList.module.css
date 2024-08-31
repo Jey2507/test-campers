@@ -1,0 +1,12 @@
+.listCampers {
+    margin: 0;
+    padding: 0;
+    width: 888px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.listItems {
+    display: flex;
+}

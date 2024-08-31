@@ -1,0 +1,124 @@
+.itemImg {
+    border-radius: 10px;
+    width: 292px;
+    height: 320px;
+    object-fit: cover;
+}
+
+.itemSvg {
+    width: 25px;
+    height: 24px;
+    
+}
+
+.itemSvgMap {
+    width: 16px;
+    height: 16px;
+}
+
+.itemSvgStar {
+    width: 16px;
+    height: 16px;
+    fill: var(--rating);
+}
+
+.itemSpan {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.itemDivSpan {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.itemHTwo {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.33;
+    color: var(--main);
+    margin: 0;
+}
+
+.itemRating {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: var(--main);
+    margin: 0;
+}
+
+.itemLocation {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--main);
+    margin: 0;
+}
+
+.itemDescr {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text);
+
+    white-space: nowrap;        
+    overflow: hidden;           
+    text-overflow: ellipsis;   
+    width: 480px;
+    margin: 0 0 24px 0;
+}
+
+.itemButton {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    color: var(--white);
+
+    border-radius: 200px;
+    width: 166px;
+    height: 56px;
+    background: var(--button);
+    cursor: pointer;
+    border: none;
+    transition: background 800ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.itemButton:hover {
+    background: var(--buttonhover);
+}
+
+.itemBox {
+    display: flex;
+    gap: 24px;
+    padding: 24px;
+    border: 1px solid var(--graylight);
+    border-radius: 20px;
+    background: var(--white);
+}
+
+.itemBoxTwo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.itemSpanPrice {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.itemBoxDiff {
+    width: 100%;
+}
