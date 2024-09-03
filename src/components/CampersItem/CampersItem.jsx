@@ -1,13 +1,14 @@
+import { Link, useLocation } from 'react-router-dom';
 import { icons as sprite } from '../../assets/index.js';
 import css from "../CampersItem/CampersItem.module.css";
 
 export default function CampersItem({ data }) {
     const image = data.gallery[0];
     const count = data.reviews.length;
+    const location = useLocation();
 
     const { AC, bathroom, kitchen, Tv, radio, refrigerator, microwave, gas, water } = data;
 
-    // Масив об'єктів, де кожен об'єкт містить назву властивості та її значення
     const features = [
         { name: "AC", value: AC },
         { name: "Bathroom", value: bathroom },
@@ -22,7 +23,7 @@ export default function CampersItem({ data }) {
 
     return (
         <div className={css.itemBox}>
-            <img className={css.itemImg} src={image.original} alt={data.description} />
+            <img className={css.itemImg} src={image.thumb} alt={data.description} />
             <div className={css.itemBoxDiff}>
                 <div className={css.itemBoxTwo}>
                     <h2 className={css.itemHTwo}>{data.name}</h2>
@@ -60,7 +61,10 @@ export default function CampersItem({ data }) {
                     ))}
                 </ul>
                 
-                <button className={css.itemButton}>Show more</button>
+                <Link to={`/catalog/${data.id}`} state={location}>
+                    <button className={css.itemButton}>Show more</button>
+                </Link>
+                
             </div>
         </div>
     );

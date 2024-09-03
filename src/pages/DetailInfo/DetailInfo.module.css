@@ -1,0 +1,93 @@
+.itemDivSpan {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.itemRating {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: var(--main);
+    margin: 0;
+}
+
+.itemLocation {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--main);
+    margin: 0;
+}
+
+.itemSvgMap {
+    width: 16px;
+    height: 16px;
+}
+
+.itemSvgStar {
+    width: 16px;
+    height: 16px;
+    fill: var(--rating);
+}
+
+.itemSpan {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.detailH {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.33;
+    color: var(--main);
+    margin: 0 0 8px 0;
+}
+
+.itemPrice {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.33;
+    color: var(--main);
+    margin: 0 0 28px 0;
+}
+
+.detailList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px;
+    margin: 0 0 28px 0;
+    padding: 0;
+}
+
+.detailItem {
+    border-radius: 10px;
+    width: 292px;
+    height: 312px;
+    object-fit: cover;
+}
+
+.detailLi {
+    width: 292px;
+    height: 312px;
+}
+
+.detailDescr {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text);
+    margin: 0;
+}
+
+.deatilBox {
+    padding: 48px 64px;
+}
