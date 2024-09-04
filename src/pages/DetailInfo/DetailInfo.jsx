@@ -28,7 +28,7 @@ export default function DetailInfo() {
     const count = detailInfo.reviews ? detailInfo.reviews.length : 0; 
 
     const getNavLinkClass = ({ isActive }) => {
-        return clsx(css.link, isActive && css.active);
+        return clsx(css.link, isActive && css.activeLink);
       };
 
     return (
@@ -66,10 +66,11 @@ export default function DetailInfo() {
                       <NavLink className={getNavLinkClass} to="features">Features</NavLink>
                       <NavLink className={getNavLinkClass} to="reviews">Review</NavLink>
                 </nav>
-                <Suspense>
-                    <Outlet />
-                </Suspense>
-
+                <div className={css.boxLine}>
+                    <Suspense>
+                        <Outlet />
+                    </Suspense>
+                </div>
             </div>
         </Header>
     )

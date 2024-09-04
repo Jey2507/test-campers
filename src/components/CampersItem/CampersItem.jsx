@@ -28,7 +28,7 @@ export default function CampersItem({ data }) {
                 <div className={css.itemBoxTwo}>
                     <h2 className={css.itemHTwo}>{data.name}</h2>
                     <span className={css.itemSpanPrice}>
-                        <p className={css.itemHTwo}>€{data.price}.00</p>
+                        <p className={css.itemPriceP}>€{data.price}.00</p>
                         <svg className={css.itemSvg}>
                             <use xlinkHref={`${sprite}#icon-heart`} />
                         </svg>
@@ -60,11 +60,9 @@ export default function CampersItem({ data }) {
                             </li>
                     ))}
                 </ul>
-                
-                <Link to={`/catalog/${data.id}`} state={location}>
+                <Link to={`/catalog/${data.id}/features`} state={location}>
                     <button className={css.itemButton}>Show more</button>
                 </Link>
-                
             </div>
         </div>
     );

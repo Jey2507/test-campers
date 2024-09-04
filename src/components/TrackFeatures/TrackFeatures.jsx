@@ -1,40 +1,42 @@
-
-// import css from "../SearchBar/SearchBar.module.css"
+import css from "../TrackFeatures/TrackFeatures.module.css"
 
 export default function TrackFeatures() {
     return (
         <>
-        <div>
-            <h3>
-                Vehicle details
-            </h3>
+        <div className={css.featuresBox}>
             <div>
-               <ul>
-                <li>
+
+            </div>
+            <div>
+                <h3 className={css.featuresH}>
+                    Vehicle details
+                </h3>
+                <ul className={css.featuresList}>
+                <li className={css.featuresItem}>
                     <p>Form</p>
                     <p>Panel truck</p>
                 </li>
-                <li>
+                <li className={css.featuresItem}>
                     <p>Length</p>
-                    <p></p>
+                    <p>11</p>
                 </li>
-                <li>
+                <li className={css.featuresItem}>
                     <p>Width</p>
-                    <p></p>
+                    <p>22</p>
                 </li>
-                <li>
+                <li className={css.featuresItem}>
                     <p>Height</p>
-                    <p></p>
+                    <p>33</p>
                 </li>
-                <li>
+                <li className={css.featuresItem}>
                     <p>Tank</p>
-                    <p></p>
+                    <p>44</p>
                 </li>
-                <li>
+                <li className={css.featuresItem}>
                     <p>Consumption</p>
-                    <p></p>
+                    <p>55</p>
                 </li>
-               </ul>
+                </ul>
             </div>
         </div>
         </>

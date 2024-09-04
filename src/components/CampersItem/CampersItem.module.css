@@ -8,7 +8,11 @@
 .itemSvg {
     width: 25px;
     height: 24px;
-    
+    cursor: pointer;
+}
+
+.itemSvg:hover {
+    fill: var(--button)
 }
 
 .itemSvgMap {
@@ -41,6 +45,20 @@
     line-height: 1.33;
     color: var(--main);
     margin: 0;
+    width: 340px;
+    white-space: nowrap;        
+    overflow: hidden;           
+    text-overflow: ellipsis; 
+}
+
+.itemPriceP {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.33;
+    color: var(--main);
+    margin: 0;
+    width: max-content;
 }
 
 .itemRating {

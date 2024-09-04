@@ -28,3 +28,7 @@ header {
 .headerItem:hover {
     color: var(--buttonhover);
 }
+
+.active {
+    color: var(--buttonhover);
+}

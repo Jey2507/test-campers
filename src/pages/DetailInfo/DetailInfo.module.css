@@ -72,6 +72,7 @@
     width: 292px;
     height: 312px;
     object-fit: cover;
+    object-position: center;
 }
 
 .detailLi {
@@ -85,9 +86,43 @@
     font-size: 16px;
     line-height: 1.5;
     color: var(--text);
-    margin: 0;
+    margin: 0 0 60px 0;
 }
 
 .deatilBox {
-    padding: 48px 64px;
+    padding: 48px 64px 80px 64px;
+}
+
+.link {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 20px;
+    width: max-content;
+    line-height: 1.2;
+    color: var(--main);
+    position: relative;
+}
+
+.activeLink::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -26.5px;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: var(--button);
+}
+
+.navLink {
+    display: flex;
+    width: 206px;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.boxLine {
+    width: 100%;
+    padding-top: 44px;
+    border-top: 2px solid var(--graylight);
 }
