@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import css from "../DetailInfo/DetailInfo.module.css"
 import { getTracksById } from "../../tracks";
 import { icons as sprite } from '../../assets/index.js';
-import { useParams } from "react-router";
+import { Outlet, useParams } from "react-router";
 import Header from "../../components/Header/Header.jsx";
 import { NavLink } from "react-router-dom";
 import clsx from "clsx";
@@ -66,6 +66,9 @@ export default function DetailInfo() {
                       <NavLink className={getNavLinkClass} to="features">Features</NavLink>
                       <NavLink className={getNavLinkClass} to="reviews">Review</NavLink>
                 </nav>
+                <Suspense>
+                    <Outlet />
+                </Suspense>
 
             </div>
         </Header>
