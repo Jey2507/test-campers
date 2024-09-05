@@ -3,8 +3,12 @@ header {
     border-bottom: 1px solid var(--badges);
     padding: 24px 200px 24px 64px;
     height: 72px;
+    margin-top: -72px;
     display: flex;
+    position: fixed;
     align-items: center;
+    width: 100%;
+    z-index: 100;
 }
 
 .headerList {
