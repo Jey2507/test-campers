@@ -17,7 +17,7 @@ export const getTracks = createAsyncThunk("campers/getTrack", async (_, thunkAPI
     }
 })
 
-export const getTracksById = createAsyncThunk("campers/getTrackById", async (id, thunkAPI)=> {
+export const getTracksById = createAsyncThunk("campers/getTrackById", async (id, thunkAPI) => {
     try {
         const response = await axios.get(`/campers/${id}`);
         console.log(response)

@@ -9,7 +9,7 @@ import { selectTracks } from "../../redux/track/selectors.js";
 
 export default function Catalog() {
   const dispatch = useDispatch()
-  const tracks = useSelector(selectTracks);
+  const {items} = useSelector(selectTracks);
 
   useEffect(() => {
     dispatch(getTracks());
@@ -20,7 +20,7 @@ export default function Catalog() {
       <Header>
         <div className={css.catalogDiv}>
           <SearchBar />
-          <CampersList tracksItem={tracks} />
+          <CampersList tracksItem={items} />
         </div>
       </Header>
     </>

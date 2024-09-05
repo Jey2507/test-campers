@@ -6,24 +6,21 @@ import { Outlet, useParams } from "react-router";
 import Header from "../../components/Header/Header.jsx";
 import { NavLink } from "react-router-dom";
 import clsx from "clsx";
-import { selectTrackById } from "../../redux/track/selectors.js";
+import { selectTracks } from "../../redux/track/selectors.js";
 import { useDispatch, useSelector } from "react-redux";
 
 export default function DetailInfo() {
   const { catalogId } = useParams();
   const dispatch = useDispatch();
 
-  const value = useSelector(selectTrackById);
+  const { currentItem } = useSelector(selectTracks);
 
   useEffect(() => {
     dispatch(getTracksById(catalogId));
   }, [catalogId, dispatch]);
 
-  console.log(value)
-  
-
-  const arrayTrack = value?.gallery || [];
-  const count = value?.reviews ? value.reviews.length : 0;
+  const arrayTrack = currentItem?.gallery || [];
+  const count = currentItem?.reviews ? currentItem.reviews.length : 0;
 
 
   const getNavLinkClass = ({ isActive }) => {
@@ -34,24 +31,24 @@ export default function DetailInfo() {
     <Header>
       <div className={css.deatilBox}>
         <div>
-          <h1 className={css.detailH}>{value.name}</h1>
+          <h1 className={css.detailH}>{currentItem.name}</h1>
           <div className={css.itemDivSpan}>
             <span className={css.itemSpan}>
               <svg className={css.itemSvgStar}>
                 <use xlinkHref={`${sprite}#icon-star`} />
               </svg>
               <p className={css.itemRating}>
-                {value.rating}({count} Reviews)
+                {currentItem.rating}({count} Reviews)
               </p>
             </span>
             <span className={css.itemSpan}>
               <svg className={css.itemSvgMap}>
                 <use xlinkHref={`${sprite}#icon-map`} />
               </svg>
-              <p className={css.itemLocation}>{value.location}</p>
+              <p className={css.itemLocation}>{currentItem.location}</p>
             </span>
           </div>
-          <p className={css.itemPrice}>€{value.price}.00</p>
+          <p className={css.itemPrice}>€{currentItem.price}.00</p>
         </div>
         {arrayTrack.length > 0 && (
           <ul className={css.detailList}>
@@ -66,7 +63,7 @@ export default function DetailInfo() {
             ))}
           </ul>
         )}
-        <p className={css.detailDescr}>{value.description}</p>
+        <p className={css.detailDescr}>{currentItem.description}</p>
         <nav className={css.navLink}>
           <NavLink className={getNavLinkClass} to="features">
             Features
