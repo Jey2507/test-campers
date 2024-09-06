@@ -10,8 +10,8 @@ export default function TrackReviews() {
         <>
             <ul>
                 {currentItem.reviews.map((item) => 
-                    <li id={item.reviewer_name}>
-                        {comment}
+                    <li key={item.reviewer_name}>
+                        {item.comment}
                     </li>
                 )}
             </ul>
