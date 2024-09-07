@@ -4,11 +4,12 @@ export default function ItemComment({data}) {
     const {reviewer_name, reviewer_rating, comment} = data;
 
     const items = () => {
-        return (
-            for (let index = 0; index <= 5; index++) {
-                <li>4</li>)
-        }    
-    }
+        let stars = [];
+        for (let index = 0; index < 5; index++) {
+            stars.push(<li key={index}>4</li>);
+        }
+        return stars;
+    };
     
     return (
         <>
@@ -18,7 +19,7 @@ export default function ItemComment({data}) {
             </div>
             <div className={css.divName}>
                 <h3 className={css.name}>{reviewer_name}</h3>
-                <ul>
+                <ul className={css.listComment}>
                     {items()}
                 </ul>
             </div>
