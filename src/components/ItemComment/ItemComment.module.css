@@ -1,0 +1,49 @@
+.boxAvatar {
+    border-radius: 60px;
+    width: 60px;
+    height: 60px;
+    background: var(--badges);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.33;
+    color: var(--button);
+}
+
+.divName {
+    width: 96px;
+    height: 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.name {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--main);
+    margin: 0;
+}
+
+.comment {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text);
+    margin: 0;
+}
+
+.mainBox {
+    width: 172px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
