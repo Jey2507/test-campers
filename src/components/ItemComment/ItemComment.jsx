@@ -1,4 +1,5 @@
 import css from "../ItemComment/ItemComment.module.css"
+import { icons as sprite } from '../../assets/index.js';
 
 export default function ItemComment({data}) {
     const {reviewer_name, reviewer_rating, comment} = data;
@@ -6,8 +7,15 @@ export default function ItemComment({data}) {
     const items = () => {
         let stars = [];
         for (let index = 0; index < 5; index++) {
-            stars.push(<li key={index}>4</li>);
+            const newClassName = index < reviewer_rating ? css.newIcon : css.icon;
+            
+            stars.push(<li key={index}>
+                <svg className={newClassName}>
+                    <use xlinkHref={`${sprite}#icon-star`} />
+                </svg>
+            </li>);
         }
+        
         return stars;
     };
     

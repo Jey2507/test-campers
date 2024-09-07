@@ -47,3 +47,22 @@
     align-items: center;
     margin-bottom: 16px;
 }
+
+.listComment {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 4px;
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+    fill: var(--badges);
+}
+
+.newIcon {
+    width: 16px;
+    height: 16px;
+    fill: var(--rating);
+}
