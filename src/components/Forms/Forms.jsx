@@ -11,7 +11,7 @@ export default function Forms({children}) {
                 <input type="text" placeholder="Name*"/>
                 <input type="email" placeholder="Email*"/>
                 <input type="date" placeholder="Booking date*"/>
-                <textarea name="" placeholder="Comment" id=""></textarea>
+                <textarea className={css.textArea} placeholder="Comment" ></textarea>
                 <button className={css.buttonForm} type="submit">Send</button>
             </form>
         </div>
