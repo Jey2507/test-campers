@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import css from "../TrackFeatures/TrackFeatures.module.css"
 import { selectTracks } from "../../redux/track/selectors";
+import Forms from "../Forms/Forms";
 
 export default function TrackFeatures() {
 
@@ -9,6 +10,7 @@ export default function TrackFeatures() {
 
     return (
         <>
+        <Forms>
         <div className={css.featuresBox}>
             <div>
 
@@ -45,6 +47,7 @@ export default function TrackFeatures() {
                 </ul>
             </div>
         </div>
+        </Forms>
         </>
     )
 }

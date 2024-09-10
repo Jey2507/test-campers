@@ -122,6 +122,8 @@
 }
 
 .boxLine {
+    display: flex;
+    gap: 40px;
     width: 100%;
     padding-top: 44px;
     border-top: 2px solid var(--graylight);
