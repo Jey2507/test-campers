@@ -3,11 +3,11 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 
 axios.defaults.baseURL = "https://66b1f8e71ca8ad33d4f5f63e.mockapi.io"
 
-export const getTracks = createAsyncThunk("campers/getTrack", async (_, thunkAPI)  => {
+export const getTracks = createAsyncThunk("campers/getTrack", async (page = 1, thunkAPI)  => {
     try {
         const response = await axios.get("/campers",{
             params: {
-                page: 1,
+                page,
                 limit: 4
             }
         })
