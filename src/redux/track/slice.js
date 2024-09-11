@@ -38,7 +38,12 @@ const trackSlise = createSlice({
       .addCase(getTracks.fulfilled, (state, action) => {
         state.loading = false;
         state.error = false;
-        state.items = action.payload.items;
+        state.items = [
+          ...state.items,
+          ...action.payload.items.filter(
+            (newItem) => !state.items.some((existingItem) => existingItem.id === newItem.id)
+          ),
+        ];
         state.totalItems = action.payload.total;
         state.morePages = state.items.length < state.totalItems;
       })
