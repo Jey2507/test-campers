@@ -7,6 +7,7 @@ import { getTracks } from "../../redux/track/operations.js";
 import { useDispatch, useSelector } from "react-redux";
 import { selectTracks } from "../../redux/track/selectors.js";
 import { resetPage } from "../../redux/track/slice.js";
+import { Toaster } from "react-hot-toast";
 
 export default function Catalog() {
   const dispatch = useDispatch()
@@ -20,10 +21,11 @@ export default function Catalog() {
   return (
     <>
       <Header>
-        <div className={css.catalogDiv}>
+        <section className={css.catalogDiv}>
           <SearchBar />
           <CampersList tracksItem={items} />
-        </div>
+          <Toaster position="top-right" containerStyle={{ zIndex: 9999 }}/>
+        </section>
       </Header>
     </>
   );

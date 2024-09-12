@@ -8,6 +8,7 @@ import { NavLink } from "react-router-dom";
 import clsx from "clsx";
 import { selectTracks } from "../../redux/track/selectors.js";
 import { useDispatch, useSelector } from "react-redux";
+import { Toaster } from "react-hot-toast";
 
 export default function DetailInfo() {
   const { catalogId } = useParams();
@@ -78,6 +79,7 @@ export default function DetailInfo() {
           </Suspense>
         </div>
       </div>
+      <Toaster position="top-right" containerStyle={{ zIndex: 9999 }}/>
     </Header>
   );
 }

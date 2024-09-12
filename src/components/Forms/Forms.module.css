@@ -24,7 +24,7 @@
     width: max-content;
 }
 
-input {
+.input {
     border-radius: 12px;
     padding-left: 18px;
     width: 100%;
@@ -41,6 +41,7 @@ input {
     display: flex;
     flex-direction: column;
     gap: 14px;
+    width: 527px;
 }
 
 .buttonForm {
