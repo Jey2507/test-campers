@@ -60,7 +60,13 @@
     border: none;
     cursor: pointer;
     margin: 10px auto 0 auto;
+    transition: background 800ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+
+.buttonForm:hover {
+    background:  var(--buttonhover);
+}
+
 
 .textArea {
     border-radius: 10px;
