@@ -1,7 +1,8 @@
 import { useSelector } from "react-redux";
 import css from "../TrackFeatures/TrackFeatures.module.css"
-import { selectTracks } from "../../redux/track/selectors";
+import { selectTracks } from "../../redux/track/selectors.js";
 import Forms from "../Forms/Forms";
+import ListFilters from "../ListFilters/ListFilters.jsx";
 
 export default function TrackFeatures() {
 
@@ -12,9 +13,7 @@ export default function TrackFeatures() {
         <>
         <Forms>
         <div className={css.featuresBox}>
-            <div>
-
-            </div>
+            <ListFilters list={currentItem}/>
             <div>
                 <h3 className={css.featuresH}>
                     Vehicle details
