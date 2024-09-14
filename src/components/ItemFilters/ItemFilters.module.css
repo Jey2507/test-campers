@@ -1,0 +1,31 @@
+.boxItem {
+    border-radius: 100px;
+    padding: 12px 18px;
+    width: max-content;
+    background: var(--badges);
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--main);
+    margin: 0;
+}
+
+.span {
+    text-transform: uppercase;
+}
+
+.icons {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

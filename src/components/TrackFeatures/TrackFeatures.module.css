@@ -5,6 +5,9 @@
     height: 588px;
     background: var(--inputs);
     padding: 44px 52px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
 }
 
 .featuresH {
