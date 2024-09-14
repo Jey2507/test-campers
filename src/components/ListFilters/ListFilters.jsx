@@ -1,7 +1,9 @@
-export default function ListFilters({ list: transmission, engine, kitchen, AC, bathroom, TV, radio, refrigerator, microwave, gas, water }) {
+export default function ListFilters({list}) {
+  const { engine, transmission, kitchen, AC, bathroom, TV, radio, refrigerator, microwave, gas, water} = list;
+  console.log(AC)
     const categories = {
-      transmission,
       engine,
+      transmission,
       kitchen,
       AC,
       bathroom,
@@ -20,12 +22,15 @@ export default function ListFilters({ list: transmission, engine, kitchen, AC, b
     return (
       <>
         <ul>
-          {array.map(([key, value]) => (
-            <li key={key}>
-              {/* Якщо значення об'єкт або інший складний тип, потрібно уточнити, що саме відображати */}
-              {typeof value === 'object' ? JSON.stringify(value) : value.toString()}
-            </li>
-          ))}
+          {array.map(([key, value]) => {
+                  const title = key === "transmission" || key === "engine" ? value : key;
+
+                  return (
+                    <li key={key}>
+                      {title}
+                    </li>
+                  )
+              })}
         </ul>
       </>
     );
