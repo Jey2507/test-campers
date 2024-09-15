@@ -14,15 +14,14 @@ export default function DetailInfo() {
   const { catalogId } = useParams();
   const dispatch = useDispatch();
 
-  const { currentItem } = useSelector(selectTracks);
-
   useEffect(() => {
     dispatch(getTracksById(catalogId));
   }, [catalogId, dispatch]);
 
+  const { currentItem } = useSelector(selectTracks);
+
   const arrayTrack = currentItem?.gallery || [];
   const count = currentItem?.reviews ? currentItem.reviews.length : 0;
-
 
   const getNavLinkClass = ({ isActive }) => {
     return clsx(css.link, isActive && css.activeLink);
