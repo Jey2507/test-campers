@@ -18,6 +18,10 @@ export default function Catalog() {
     dispatch(getTracks());
   }, [dispatch]);
 
+  if (!items ) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <>
       <Header>
