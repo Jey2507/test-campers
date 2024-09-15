@@ -27,6 +27,10 @@ export default function DetailInfo() {
     return clsx(css.link, isActive && css.activeLink);
   };
 
+  if (!currentItem ) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <Header>
       <div className={css.deatilBox}>
