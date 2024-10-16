@@ -10,6 +10,8 @@ export default function CampersList({tracksItem}) {
 
     const {morePages} = useSelector(selectTracks)
 
+    const array = useSelector(selectTracks)
+
     function handlePagination() {
         if (morePages) {
             dispatch(nextPage());
@@ -26,8 +28,8 @@ export default function CampersList({tracksItem}) {
                     </li>
                 )}
             </ul>
-            {morePages ? 
-            <button className={css.button} onClick={handlePagination}>Load more</button> : null}
+            {!morePages || array.items.length === 0 ? 
+            null : <button className={css.button} onClick={handlePagination}>Load more</button>}
         </div>
     )
 }
